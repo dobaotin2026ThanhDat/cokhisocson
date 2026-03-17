@@ -879,17 +879,6 @@ animation: shine 4s linear infinite;
 .btn-inox-menu:nth-child(6)::before{ animation-delay:2.5s; }
 
 }
-
-/* delay từng nút */
-.btn-inox-menu:nth-child(1)::before{ animation-delay:0s; }
-.btn-inox-menu:nth-child(2)::before{ animation-delay:0.5s; }
-.btn-inox-menu:nth-child(3)::before{ animation-delay:1s; }
-.btn-inox-menu:nth-child(4)::before{ animation-delay:1.5s; }
-.btn-inox-menu:nth-child(5)::before{ animation-delay:2s; }
-.btn-inox-menu:nth-child(6)::before{ animation-delay:2.5s; }
-
-}
-
 /* ===== PROJECT TABLE ===== */
 .project-table{
 background:#f8f9fa;
