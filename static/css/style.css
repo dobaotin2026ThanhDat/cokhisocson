@@ -1016,9 +1016,9 @@ margin-bottom:25px;
 /* ===== FIX LOGO MOBILE FINAL ===== */
 @media (max-width: 768px) {
     #logo-main {
-        height: 60px !important;
+        height: 70px !important;
         width: auto !important;
-        max-width: 140px;
+        max-width: 150px;
         object-fit: contain;
     }
 
