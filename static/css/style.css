@@ -869,7 +869,7 @@ animation:shine 0.8s;
 .btn-inox-primary::before,
 .btn-inox-zalo::before,
 .btn-inox-cta::before{
-animation:shine 3s linear infinite;
+animation:none !important;
 }
 
 /* delay từng nút */
@@ -1000,7 +1000,7 @@ transition:all 0.3s ease;
 @media (max-width: 768px){
 
     #logo-main{
-        height:60px !important; /* 🔥 chỉnh số này nếu muốn to hơn */
+        height:52px !important; /* 🔥 chỉnh số này nếu muốn to hơn */
     }
 
     .navbar.scrolled #logo-main{
