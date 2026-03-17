@@ -124,13 +124,6 @@ box-shadow:0 2px 10px rgba(0,0,0,0.15);
 
 }
 
-/* logo nhỏ lại */
-
-.navbar.scrolled img{
-
-height:35px;
-
-}
 
 /* ================= SERVICE CARD ================= */
 
@@ -180,30 +173,9 @@ white-space:nowrap; /* ❗ không xuống dòng */
 
 /* ================= KHI SCROLL ================= */
 
-.navbar.scrolled #logo-main{
-height:45px;
-}
 
 .navbar.scrolled .logo-text{
 font-size:16px;
-}
-
-/* logo mượt */
-#logo-main{
-transition:all 0.3s ease;
-}
-
-/* scroll nhỏ lại */
-.navbar.scrolled #logo-main{
-height:45px !important;
-}
-
-#logo-main{
-transition:all 0.3s ease;
-}
-
-.navbar.scrolled #logo-main{
-height:45px !important;
 }
 
 /* menu link hover */
@@ -1013,28 +985,37 @@ margin-bottom:20px;
 margin-bottom:25px;
 }
 
-/* ===== FIX LOGO MOBILE FINAL ===== */
-@media (max-width: 768px) {
+/* ===== LOGO DESKTOP ===== */
+#logo-main{
+height:60px;
+transition:all 0.3s ease;
+}
 
-    #logo-main {
-        height: 48px !important; /* chuẩn đẹp */
-        width: auto;
+/* scroll chỉ áp dụng PC */
+@media (min-width: 769px){
+    .navbar.scrolled #logo-main{
+        height:45px;
+    }
+}
+@media (max-width: 768px){
+
+    #logo-main{
+        height:60px !important; /* 🔥 chỉnh số này nếu muốn to hơn */
     }
 
-    .navbar-brand {
-        display: flex;
-        align-items: center;
-        gap: 6px;
+    .navbar.scrolled #logo-main{
+        height:52px !important; /* ❌ KHÔNG cho nhỏ lại nữa */
     }
 
-    .btn-baogia {
-        white-space: nowrap;
-        font-size: 13px;
-        padding: 6px 10px;
+    .navbar-brand{
+        display:flex;
+        align-items:center;
+        gap:8px;
     }
 
-    .navbar {
-        padding-top: 6px;
-        padding-bottom: 6px;
+    .btn-baogia{
+        white-space:nowrap;
+        font-size:13px;
+        padding:6px 10px;
     }
 }
