@@ -167,7 +167,7 @@ color:#007bff;
 /* ================= LOGO STYLE ================= */
 
 #logo-main{
-height:50px;
+height:60px;
 transition:all 0.3s ease;
 }
 
@@ -1016,7 +1016,7 @@ margin-bottom:25px;
 /* ===== FIX LOGO MOBILE FINAL ===== */
 @media (max-width: 768px) {
     #logo-main {
-        height: 50px !important;
+        height: 60px !important;
         width: auto !important;
         max-width: 140px;
         object-fit: contain;
