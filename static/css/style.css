@@ -1,0 +1,1014 @@
+body{
+background:#f5f7fa;
+font-family:Arial;
+padding-top:80px;
+}
+
+.hero{
+background:#0d3b66;
+color:white;
+padding:60px 0;
+}
+.hero .row{
+min-height:450px;
+}
+
+.section{
+
+padding:80px 0;
+
+}
+
+
+.card{
+
+border:none;
+
+border-radius:10px;
+
+}
+
+.navbar-brand small{
+
+font-weight:600;
+
+font-size:14px;
+
+letter-spacing:1px;
+
+}
+
+/* ================= HERO ================= */
+
+/* GIẢM KHOẢNG TRỐNG */
+
+/* chữ */
+.hero h1{
+font-size:32px;
+font-weight:600;
+line-height:1.4;
+margin-bottom:15px;
+}
+
+/* mô tả */
+.hero p{
+font-size:15px;
+opacity:0.9;
+margin-bottom:0;
+}
+
+/* ảnh */
+.hero img{
+border-radius:11px;
+}
+/* ================= NAVBAR ================= */
+
+.navbar-brand small{
+
+font-weight:500;
+
+font-size:12px;
+
+letter-spacing:1px;
+
+}
+
+
+/* ================= MENU ================= */
+.offcanvas-body{
+display:flex;
+flex-direction:column;
+height:100%;
+padding:10px 15px;
+}
+
+/* KHÔNG cho phần trên bị giãn */
+.menu-links{
+flex-shrink:0;
+}
+
+/* Đẩy phần dưới xuống đáy */
+.menu-company-info{
+margin-top:auto;
+padding-top:10px;
+}
+/* ================= BUTTON ================= */
+
+.btn-primary{
+
+background:#007bff;
+
+border:none;
+
+padding:10px 20px;
+
+}
+
+/* ================= HEADER SCROLL EFFECT ================= */
+
+.navbar{
+
+transition:all 0.3s ease;
+
+}
+
+/* header khi cuộn */
+
+.navbar.scrolled{
+
+padding-top:5px;
+
+padding-bottom:5px;
+
+box-shadow:0 2px 10px rgba(0,0,0,0.15);
+
+}
+
+/* logo nhỏ lại */
+
+.navbar.scrolled img{
+
+height:35px;
+
+}
+
+/* ================= SERVICE CARD ================= */
+
+.service-card{
+
+background:white;
+
+padding:20px;
+
+border-radius:10px;
+
+transition:all 0.3s;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+
+}
+
+.service-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+.process-box h1{
+
+font-size:40px;
+
+color:#007bff;
+
+}
+
+/* ================= LOGO STYLE ================= */
+
+#logo-main{
+height:70px;
+transition:all 0.3s ease;
+}
+
+.logo-text{
+font-weight:700;
+font-size:20px;
+white-space:nowrap; /* ❗ không xuống dòng */
+}
+
+
+/* ================= KHI SCROLL ================= */
+
+.navbar.scrolled #logo-main{
+height:45px;
+}
+
+.navbar.scrolled .logo-text{
+font-size:16px;
+}
+
+/* logo mượt */
+#logo-main{
+transition:all 0.3s ease;
+}
+
+/* scroll nhỏ lại */
+.navbar.scrolled #logo-main{
+height:45px !important;
+}
+
+#logo-main{
+transition:all 0.3s ease;
+}
+
+.navbar.scrolled #logo-main{
+height:45px !important;
+}
+
+/* menu link hover */
+.offcanvas a{
+font-weight:500;
+transition:0.2s;
+}
+
+.offcanvas a:hover{
+color:#0d6efd;
+}
+
+/* nút đẹp hơn */
+.offcanvas .btn{
+border-radius:8px;
+}
+
+/* ================= BUTTON MENU INOX ================= */
+
+.menu-btn{
+display:inline-block;
+padding:10px 18px;
+margin:8px auto;
+border-radius:12px;
+font-weight:500;
+text-align:center;
+
+/* inox effect */
+background:linear-gradient(145deg,#e6e6e6,#ffffff);
+box-shadow:5px 5px 10px #cfcfcf,
+-5px -5px 10px #ffffff;
+
+transition:0.2s;
+}
+
+/* hover ấn xuống */
+.menu-btn:hover{
+box-shadow:inset 3px 3px 6px #cfcfcf,
+inset -3px -3px 6px #ffffff;
+}
+
+/* NÚT CHÍNH (BÁO GIÁ) */
+.btn-inox-primary{
+background: linear-gradient(145deg, #0d6efd, #4dabff);
+color:white;
+}
+
+/* ZALO */
+.btn-inox-zalo{
+background: linear-gradient(145deg, #0084ff, #5ac8ff);
+color:white;
+}
+
+/* ================= FIX LOGO ================= */
+
+.menu-logo{
+max-width:100%;
+height:auto;
+object-fit:contain;
+display:block;
+margin:auto;
+padding:10px 0;
+}
+
+/* ================= MENU BUTTON INOX ================= */
+
+.menu-toggle-btn{
+border:none;
+outline:none;
+
+font-size:20px;
+padding:8px 14px;
+border-radius:12px;
+cursor:pointer;
+
+/* nền inox */
+background:linear-gradient(145deg,#e6e6e6,#ffffff);
+
+/* hiệu ứng nổi */
+box-shadow:
+4px 4px 10px #cfcfcf,
+-4px -4px 10px #ffffff;
+
+transition:all 0.2s ease;
+}
+
+/* hover */
+.menu-toggle-btn:hover{
+box-shadow:
+inset 3px 3px 6px #cfcfcf,
+inset -3px -3px 6px #ffffff;
+}
+
+/* click */
+.menu-toggle-btn:active{
+transform:scale(0.95);
+}
+
+/* ================= MENU WIDTH RESPONSIVE ================= */
+
+/* PC */
+@media (min-width: 992px){
+.offcanvas{
+width: 25% !important;
+max-width: 320px;
+}
+}
+
+/* Tablet */
+@media (max-width: 991px){
+.offcanvas{
+width: 50% !important;
+}
+}
+
+/* Mobile */
+@media (max-width: 576px){
+.offcanvas{
+width: 70% !important;
+}
+}
+
+.offcanvas{
+border-right:1px solid #eee;
+}
+
+/* ================= ZALO BUTTON ================= */
+
+.zalo-btn{
+position:fixed;
+right:20px;
+bottom:20px;
+
+padding:14px 22px;
+border-radius:50px;
+
+font-weight:600;
+font-size:15px;
+
+color:white;
+text-decoration:none; /* ❌ bỏ gạch dưới */
+
+/* gradient đẹp */
+background:linear-gradient(135deg,#0084ff,#00c6ff);
+
+/* bóng nổi */
+box-shadow:0 6px 20px rgba(0,0,0,0.25);
+
+transition:all 0.25s ease;
+}
+
+/* hover */
+.zalo-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+color:white;
+}
+
+/* click */
+.zalo-btn:active{
+transform:scale(0.95);
+}
+
+/* ================= ZALO RUNG SAU 5S ================= */
+
+@keyframes zalo-shake {
+0% { transform: translateX(0); }
+20% { transform: translateX(-3px); }
+40% { transform: translateX(3px); }
+60% { transform: translateX(-3px); }
+80% { transform: translateX(3px); }
+100% { transform: translateX(0); }
+}
+
+/* class kích hoạt rung */
+.zalo-shake{
+animation: zalo-shake 0.4s ease;
+}
+
+/* ================= COMPANY INFO IN MENU ================= */
+
+.menu-company-info{
+margin-top:25px;
+padding-top:15px;
+border-top:1px solid #eee;
+font-size:13px;
+color:#555;
+}
+
+.company-name{
+font-weight:600;
+font-size:15px;
+color:#000;
+margin-bottom:6px;
+}
+
+.company-desc{
+margin-bottom:10px;
+color:#666;
+}
+
+.company-item{
+margin-bottom:6px;
+}
+
+.company-item a{
+text-decoration:none;
+color:#007bff;
+font-weight:500;
+}
+
+.company-item a:hover{
+text-decoration:underline;
+}
+
+.company-highlight{
+margin-top:8px;
+color:#28a745;
+font-size:12px;
+}
+
+.offcanvas-body{
+display:flex;
+flex-direction:column;
+height:100%;
+}
+
+/* Đẩy menu lên trên */
+.menu-links{
+flex:0;
+}
+
+/* Đẩy phần info xuống sát dưới nhưng không dư */
+.menu-company-info{
+margin-top:auto;
+padding-bottom:10px;
+}
+
+.btn-inox-menu{
+display:block;
+width:100%;
+padding:14px 10px;
+font-size:16px;
+font-weight:500;
+border-radius:12px;
+
+background:linear-gradient(145deg, #ffffff, #e6e6e6);
+color:#333;
+text-align:center;
+text-decoration:none;
+
+/* hiệu ứng nổi */
+box-shadow: 
+    4px 4px 10px rgba(0,0,0,0.15),
+    -3px -3px 8px rgba(255,255,255,0.9);
+
+transition: all 0.25s ease;
+}
+
+/* hover */
+.btn-inox-menu:hover{
+transform:translateY(-2px);
+box-shadow: 
+    6px 6px 14px rgba(0,0,0,0.2),
+    -4px -4px 10px rgba(255,255,255,1);
+color:#000;
+}
+
+/* khi bấm */
+.btn-inox-menu:active{
+transform:translateY(1px);
+box-shadow: inset 2px 2px 5px rgba(0,0,0,0.15);
+}
+
+/* ================= INOX SHINE EFFECT ================= */
+.btn-inox-menu{
+position:relative;
+overflow:hidden;
+}
+
+/* vệt sáng */
+.btn-inox-menu::before{
+content:"";
+position:absolute;
+top:0;
+left:-75%;
+width:50%;
+height:100%;
+
+background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.8),
+    transparent
+);
+
+transform:skewX(-25deg);
+}
+
+/* hover chạy */
+.btn-inox-menu:hover::before{
+animation:shine 0.8s;
+}
+
+
+/* ================= ACTIVE MENU ================= */
+.btn-inox-menu.active{
+background:linear-gradient(145deg, #dcdcdc, #c0c0c0);
+font-weight:600;
+
+box-shadow:
+    inset 2px 2px 6px rgba(0,0,0,0.15),
+    inset -2px -2px 6px rgba(255,255,255,0.8);
+}
+
+/* bấm xuống */
+.btn-inox-cta:active{
+transform:translateY(1px);
+box-shadow:
+    inset 3px 3px 6px rgba(0,0,0,0.2);
+}
+
+/* ================= NÚT CAM NHẠT ================= */
+.btn-inox-primary,
+.btn-inox-zalo{
+background:linear-gradient(145deg, #ffd8a8, #ffc078);
+color:#222;
+position:relative;   /* 🔥 THÊM DÒNG NÀY */
+z-index:1;
+}
+.btn-inox-cta::before{
+opacity:0.9;
+}
+/* hover sáng hơn */
+.btn-inox-primary:hover,
+.btn-inox-zalo:hover{
+background:linear-gradient(145deg, #ffe5c2, #ffcd94);
+color:#000;
+}
+
+/* click chuyển xanh */
+.btn-inox-primary:active,
+.btn-inox-zalo:active{
+background:linear-gradient(145deg, #0d6efd, #0a58ca);
+color:white;
+}
+
+/* ================= FOOTER CTA ================= */
+.footer-cta{
+display:inline-block;
+padding:10px 20px;
+border-radius:30px;
+
+background:linear-gradient(145deg, #ffd8a8, #ffc078);
+color:#222;
+text-decoration:none;
+font-weight:600;
+
+box-shadow:
+    3px 3px 8px rgba(0,0,0,0.3),
+    -2px -2px 6px rgba(255,255,255,0.1);
+
+transition:0.3s;
+}
+
+.footer-cta:hover{
+background:linear-gradient(145deg, #ffe5c2, #ffcd94);
+}
+
+.footer-cta:active{
+background:linear-gradient(145deg, #0d6efd, #0a58ca);
+color:#fff;
+}
+
+.hero{
+background:#0d3b66;
+padding:60px 0;
+}
+
+.hero-title{
+font-size:32px;
+font-weight:700;
+line-height:1.4;
+margin-bottom:15px;
+}
+
+.hero-sub{
+font-size:15px;
+opacity:0.9;
+margin-bottom:10px;
+}
+
+/* ảnh đẹp hơn */
+.hero-img{
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+.hero{
+background:linear-gradient(135deg,#0d3b66,#1a5ea8);
+}
+
+/* ===== FIX VỆT SÁNG (GIỮ NGUYÊN HỆ THỐNG) ===== */
+.btn-inox-cta{
+position:relative;
+display:block;
+width:100%;
+padding:14px;
+border-radius:12px;
+font-weight:600;
+text-align:center;
+text-decoration:none;
+overflow:hidden;
+z-index:1;
+
+/* GIỮ màu cam nhạt như anh đang dùng */
+background:linear-gradient(145deg, #ffd8a8, #ffc078);
+color:#222;
+
+/* GIỮ hiệu ứng nổi */
+box-shadow:
+    4px 4px 10px rgba(0,0,0,0.2),
+    -3px -3px 8px rgba(255,255,255,0.9);
+
+transition: all 0.25s ease;
+}
+
+/* hover nổi */
+.btn-inox-cta:hover{
+transform:translateY(-2px);
+}
+
+/* 🔥 FIX: vệt sáng */
+.btn-inox-cta::before{
+content:"";
+position:absolute;
+top:0;
+left:-75%;
+width:50%;
+height:100%;
+z-index:3;
+
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.9),
+transparent
+);
+
+transform:skewX(-25deg);
+pointer-events:none;
+}
+
+/* chạy mượt */
+.btn-inox-cta:hover::before{
+animation:shine 0.8s linear;
+}
+
+/* animation */
+@keyframes shine{
+0%{ left:-75%; }
+100%{ left:125%; }
+}
+
+/* click xanh giữ nguyên */
+.btn-inox-cta:active{
+background:linear-gradient(145deg, #0d6efd, #0a58ca);
+color:white;
+}
+
+/* ================= FIX TOÀN BỘ VỆT SÁNG & MÀU (FINAL) ================= */
+
+/* RESET xung đột */
+.btn-inox-menu,
+.btn-inox-primary,
+.btn-inox-zalo,
+.btn-inox-cta{
+position:relative;
+overflow:hidden;
+z-index:1;
+}
+
+/* ===== MENU BUTTON (GIỮ INOX + THÊM SÁNG) ===== */
+.btn-inox-menu{
+background:linear-gradient(145deg, #ffffff, #e6e6e6);
+color:#333;
+
+box-shadow: 
+    4px 4px 10px rgba(0,0,0,0.15),
+    -3px -3px 8px rgba(255,255,255,0.9);
+
+transition: all 0.25s ease;
+}
+
+/* ===== NÚT CAM (CTA, ZALO, PRIMARY) ===== */
+.btn-inox-primary,
+.btn-inox-zalo,
+.btn-inox-cta{
+background:linear-gradient(145deg, #ffd8a8, #ffc078);
+color:#222;
+
+box-shadow:
+    4px 4px 10px rgba(0,0,0,0.2),
+    -3px -3px 8px rgba(255,255,255,0.9);
+
+transition: all 0.25s ease;
+}
+
+/* hover */
+.btn-inox-menu:hover,
+.btn-inox-primary:hover,
+.btn-inox-zalo:hover,
+.btn-inox-cta:hover{
+transform:translateY(-2px);
+}
+
+/* ===== VỆT SÁNG CHUNG (FIX CHUẨN) ===== */
+.btn-inox-menu::before,
+.btn-inox-primary::before,
+.btn-inox-zalo::before,
+.btn-inox-cta::before{
+content:"";
+position:absolute;
+top:0;
+left:-75%;
+width:50%;
+height:100%;
+z-index:5;
+
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.9),
+transparent
+);
+
+transform:skewX(-25deg);
+pointer-events:none;
+}
+
+/* chạy */
+.btn-inox-menu:hover::before,
+.btn-inox-primary:hover::before,
+.btn-inox-zalo:hover::before,
+.btn-inox-cta:hover::before{
+animation:shine 0.8s linear;
+}
+
+/* animation */
+@keyframes shine{
+0%{ left:-75%; }
+100%{ left:125%; }
+}
+
+/* ===== CLICK ===== */
+.btn-inox-primary:active,
+.btn-inox-zalo:active,
+.btn-inox-cta:active{
+background:linear-gradient(145deg, #0d6efd, #0a58ca);
+color:white;
+}
+
+/* ===== ACTIVE MENU ===== */
+.btn-inox-menu.active{
+background:linear-gradient(145deg, #dcdcdc, #c0c0c0);
+font-weight:600;
+
+box-shadow:
+    inset 2px 2px 6px rgba(0,0,0,0.15),
+    inset -2px -2px 6px rgba(255,255,255,0.8);
+}
+
+/* ================= PROJECT ITEM ================= */
+.project-item{
+margin-bottom:20px;
+background:#fff;
+border-radius:12px;
+overflow:hidden;
+
+/* bóng nhẹ */
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+transition:0.3s;
+}
+
+.project-item:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ảnh */
+.project-item img{
+width:100%;
+display:block;
+}
+
+/* phần text */
+.project-info{
+padding:12px 15px;
+background:#f8f9fa;
+}
+
+/* tiêu đề */
+.project-title{
+font-weight:600;
+font-size:16px;
+margin-bottom:4px;
+color:#0d3b66;
+}
+
+/* mô tả */
+.project-desc{
+font-size:13px;
+color:#666;
+}
+
+.hero-business{
+margin-top:25px;
+padding:20px;
+
+/* đổi nền sang trắng nhẹ */
+background:#ffffff;
+border-radius:12px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* tiêu đề */
+.hero-business h3{
+font-size:18px;
+font-weight:600;
+margin-bottom:12px;
+color:#0d3b66;
+}
+
+/* list */
+.hero-business ul{
+padding-left:18px;
+margin:0;
+}
+
+.hero-business li{
+font-size:14px;
+margin-bottom:6px;
+line-height:1.5;
+color:#333;
+}
+
+.hero img{
+margin-top:15px;
+}
+
+.hero h1{
+margin-bottom:20px;
+}
+
+.hero p{
+margin-bottom:10px;
+}
+
+/* ===== BO GÓC ẢNH DỊCH VỤ ===== */
+.service-card{
+border-radius:12px;
+overflow:hidden; /* 🔥 QUAN TRỌNG */
+}
+
+.service-card img{
+width:100%;
+display:block;
+}
+
+.service-card h5,
+.service-card p{
+text-align:center !important;
+}
+.service-card h5{
+margin-top:5px;
+margin-bottom:6px;
+}
+
+.service-card p{
+margin:0;
+}
+
+.btn-inox-menu:active::before{
+animation:shine 0.8s;
+}
+
+@media (max-width: 768px){
+
+.btn-inox-menu::before,
+.btn-inox-primary::before,
+.btn-inox-zalo::before,
+.btn-inox-cta::before{
+animation:shine 3s linear infinite;
+}
+
+/* delay từng nút */
+.btn-inox-menu:nth-child(1)::before{ animation-delay:0s; }
+.btn-inox-menu:nth-child(2)::before{ animation-delay:0.5s; }
+.btn-inox-menu:nth-child(3)::before{ animation-delay:1s; }
+.btn-inox-menu:nth-child(4)::before{ animation-delay:1.5s; }
+.btn-inox-menu:nth-child(5)::before{ animation-delay:2s; }
+.btn-inox-menu:nth-child(6)::before{ animation-delay:2.5s; }
+
+}
+
+/* ===== PROJECT TABLE ===== */
+.project-table{
+background:#f8f9fa;
+}
+
+.project-table h2{
+font-weight:600;
+color:#0d3b66;
+}
+
+/* bảng */
+.project-table-custom{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* header */
+.project-table-custom thead{
+background:#0d3b66;
+color:white;
+}
+
+.project-table-custom th{
+padding:14px;
+font-weight:500;
+text-align:center;
+}
+
+/* body */
+.project-table-custom td{
+padding:12px;
+font-size:14px;
+vertical-align:middle;
+}
+
+/* zebra */
+.project-table-custom tbody tr:nth-child(even){
+background:#f1f5f9;
+}
+
+/* hover */
+.project-table-custom tbody tr:hover{
+background:#e3f2fd;
+}
+
+/* cột nhỏ */
+.project-table-custom td:first-child,
+.project-table-custom th:first-child{
+text-align:center;
+width:60px;
+}
+
+/* năm */
+.project-table-custom td:last-child{
+text-align:center;
+font-weight:600;
+color:#0d6efd;
+}
+
+.table-responsive{
+border-radius:12px;
+overflow:hidden;
+}
+.project-table{
+animation:fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.project-table-custom thead th{
+font-weight:700;
+font-size:11px;
+letter-spacing:0.5px;
+}
+.project-table-custom td:nth-child(2){
+font-weight:600;
+color:#0d3b66;
+}
+.project-table-custom thead{
+border-bottom:2px solid #0d6efd;
+}
+.project-table-custom thead th{
+text-align:center;      /* ngang */
+vertical-align:middle;  /* dọc */
+}
+
+.quote-benefits{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+margin-bottom:20px;
+}
+
+.quote-form{
+margin-bottom:25px;
+}

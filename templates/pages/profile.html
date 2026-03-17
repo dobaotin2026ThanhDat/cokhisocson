@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- ================= TITLE ================= -->
+
+<div class="container text-center">
+
+<h2 class="mb-4">
+
+Hồ sơ năng lực
+
+</h2>
+
+<p>
+
+Giới thiệu năng lực sản xuất và các dự án tiêu biểu của Cơ khí Thành Đạt
+
+</p>
+
+</div>
+
+
+
+<!-- ================= PDF VIEW ================= -->
+
+<div class="container mt-4">
+
+<iframe src="{% static 'files/hoso-nang-luc.pdf' %}"
+
+width="100%"
+
+height="800px"
+
+style="border:1px solid #ddd; border-radius:10px;">
+
+</iframe>
+
+</div>
+
+
+
+<!-- ================= DOWNLOAD BUTTON ================= -->
+
+<div class="container text-center mt-4">
+
+<a href="{% static 'files/hoso-nang-luc.pdf' %}"
+
+class="btn btn-primary btn-lg"
+
+target="_blank">
+
+Tải hồ sơ PDF
+
+</a>
+
+</div>
+
+
+{% endblock %}
