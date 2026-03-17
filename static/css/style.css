@@ -167,7 +167,7 @@ color:#007bff;
 /* ================= LOGO STYLE ================= */
 
 #logo-main{
-height:70px;
+height:50px;
 transition:all 0.3s ease;
 }
 
@@ -1013,23 +1013,24 @@ margin-bottom:20px;
 margin-bottom:25px;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header-logo img {
-    height: 50px;
-}
-
+/* ===== FIX LOGO MOBILE FINAL ===== */
 @media (max-width: 768px) {
-    .header-logo img {
-        height: 36px;
+    #logo-main {
+        height: 36px !important;
+        width: auto !important;
+        max-width: 140px;
+        object-fit: contain;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 6px;
     }
 
     .btn-baogia {
-        font-size: 14px;
+        white-space: nowrap;
+        font-size: 13px;
         padding: 6px 10px;
     }
 }
