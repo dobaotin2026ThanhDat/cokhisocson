@@ -32,7 +32,7 @@ ALLOWED_HOSTS = [
     'cokhisocson.onrender.com'
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Application definition
 
 INSTALLED_APPS = [
