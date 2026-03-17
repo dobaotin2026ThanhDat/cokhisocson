@@ -1022,8 +1022,8 @@ margin-bottom:25px;
     }
 
     .header img {
-        height: 36px;
-        max-width: 140px;
+        height: 32px !important; /* ép nhỏ luôn */
+        width: auto;
     }
 
     .btn-baogia {
