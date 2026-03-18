@@ -1028,26 +1028,15 @@ width:100%;
 z-index:1000;
 }
 
-/* ===== TOP LINKS DÍNH CHẶT DƯỚI NAVBAR ===== */
 .top-links{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-
-/* 🔥 mấu chốt: luôn nằm ngay dưới navbar */
-transform:translateY(100%);
-
 display:flex;
 justify-content:center;
 gap:12px;
 
-padding:8px 0;
-
+padding:6px 0;
 background:#fff;
-z-index:999;
 
-box-shadow:0 2px 6px rgba(0,0,0,0.05);
+border-top:1px solid #eee;
 }
 
 /* link */
@@ -1058,30 +1047,5 @@ background:#f1f3f5;
 color:#333;
 text-decoration:none;
 font-size:13px;
-font-weight:500;
 white-space:nowrap;
-transition:0.2s;
-}
-
-.top-links a:hover{
-background:#0d6efd;
-color:#fff;
-}
-
-/* ===== TRÁNH ĐÈ NỘI DUNG ===== */
-body{
-padding-top:130px;
-}
-
-/* MOBILE */
-@media (max-width:768px){
-.top-links{
-gap:8px;
-overflow-x:auto;
-}
-
-.top-links a{
-font-size:12px;
-padding:5px 10px;
-}
 }
