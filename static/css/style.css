@@ -1019,31 +1019,47 @@ transition:all 0.3s ease;
     }
 }
 
-
+/* ===== TOP LINKS FIX CỨNG DƯỚI NAVBAR ===== */
 .top-links{
+position:fixed;
+top:80px; /* chỉnh nếu navbar cao khác */
+left:0;
+width:100%;
+
 display:flex;
 justify-content:center;
 align-items:center;
 gap:18px;
+
+padding:8px 0;
 font-size:14px;
-margin:8px 0 15px;
-white-space:nowrap; /* 🔥 luôn 1 dòng */
-overflow:hidden;
+
+background:rgba(255,255,255,0.95);
+backdrop-filter: blur(6px);
+
+z-index:998;
+
+white-space:nowrap;
+overflow-x:auto;
+
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
 
+/* link */
 .top-links a{
 color:#666;
 text-decoration:none;
+font-weight:600;
 }
 
-/* dấu | ngăn cách */
+/* dấu | */
 .top-links a:not(:last-child)::after{
 content:"|";
 margin-left:12px;
 color:#ccc;
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 @media (max-width:768px){
 .top-links{
 font-size:12px;
@@ -1054,16 +1070,8 @@ gap:10px;
 margin-left:8px;
 }
 }
-.top-links a{
-color:#666;
-text-decoration:none;
-font-weight:600; /* 🔥 đậm hơn */
-}
 
-.top-links{
-position:sticky;
-top:70px; /* 🔥 chuẩn theo navbar của anh */
-background:#fff;
-z-index:999;
-box-shadow:0 2px 8px rgba(0,0,0,0.05);
+/* ===== TRÁNH BỊ ĐÈ NỘI DUNG ===== */
+body{
+padding-top:120px; /* 80 navbar + 40 top-links */
 }
