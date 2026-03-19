@@ -1,0 +1,582 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Mulish:wght@400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
+    <title>Cơ khí Thành Đạt</title>
+<!--
+
+TemplateMo 548 Training Studio
+
+https://templatemo.com/tm-548-training-studio
+
+-->
+    <!-- Additional CSS Files -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+<link rel="stylesheet" href="{% static 'css/templatemo-training-studio.css' %}">
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+    <img src="{% static 'images/logo.png' %}" alt="Cơ khí Thành Đạt" style="height:50px;">
+</a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Giới thiệu</a></li>
+                            <li class="scroll-to-section"><a href="#features">Dịch vụ</a></li>
+                            <li class="scroll-to-section"><a href="#our-classes">Dự án</a></li>
+                            <li class="scroll-to-section"><a href="#hoso-nangluc">Hồ sơ năng lực</a></li>
+                            <li class="scroll-to-section"><a href="#contact-banner">Liên hệ báo giá</a></li> 
+                        </ul>  
+                        <a class="menu-trigger" data-bs-toggle="offcanvas" href="#mainMenu" role="button" aria-controls="mainMenu">
+    <span>Menu</span>
+</a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ================= MENU TRƯỢT BÊN PHẢI ================= -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenu" style="width:65%;">
+  <div class="offcanvas-header border-bottom">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body text-center">
+
+    <!-- LOGO -->
+    <!-- LOGO trong menu offcanvas -->
+<img src="{% static 'images/logo.png' %}" class="menu-logo mb-3" style="height:42px; width:auto; object-fit:contain;">
+
+    <!-- MENU -->
+    <div class="d-grid gap-3 mb-4">
+        <a href="#top" class="btn-inox-menu">Trang chủ / Giới thiệu</a>
+        <a href="#features" class="btn-inox-menu">Dịch vụ</a>
+        <a href="#our-classes" class="btn-inox-menu">Dự án</a>
+        <a href="#hoso-nangluc" class="btn-inox-menu">Hồ sơ năng lực</a>
+    </div>
+
+    <!-- NÚT HÀNH ĐỘNG -->
+    <div class="d-grid gap-2">
+    <a href="#contact-banner" class="btn-inox-cta btn-inox-primary-redesign">Nhận báo giá</a>
+    <a href="https://zalo.me/0962133098" class="btn-inox-cta btn-inox-zalo-red">Chat Zalo 0962 133 098</a>
+</div>
+    <!-- THÔNG TIN CÔNG TY -->
+<div class="menu-company-info text-start mt-4">
+    <hr>
+    <p class="company-name">CTY TNHH XÂY DỰNG VÀ GIA CÔNG CƠ KHÍ THÀNH ĐẠT</p>
+    <p class="company-address">📍 Địa chỉ: Khối 6, thôn Đoài, Phù Lỗ, Sóc Sơn, Hà Nội</p>
+    <p class="company-desc">Gia công CNC • Gia công cơ khí chính xác</p>
+    <p class="company-phone">📞 <a href="tel:0962133098">0962 133 098</a></p>
+    <p class="company-email">✉️ thanhdat310@gmail.com</p>
+    <p class="company-highlight">✔ Tư vấn miễn phí – Báo giá nhanh trong 5 phút</p>
+</div>
+
+  </div>
+</div>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+<div class="main-banner" id="top">
+    <video autoplay muted loop id="bg-video">
+        <source src="{% static 'images/gym-video.mp4' %}" type="video/mp4" />
+    </video>
+
+    <div class="video-overlay header-text">
+        <div class="caption">
+    <h6>Công ty TNHH Xây dựng và Gia công cơ khí Thành Đạt</h6>
+    
+    <h2>
+    <span style="color: red !important;">GIA CÔNG CƠ KHÍ</span><br>
+    <span class="sub-title">SẮT THÉP HÌNH MỸ THUẬT</span>
+</h2>
+
+    <p class="small-address">📍 Địa chỉ: Khối 6, thôn Đoài, Phù Lỗ, Sóc Sơn, Hà Nội</p>
+
+    <div class="main-button scroll-to-section">
+        <a href="#features">Dịch vụ</a>
+    </div>
+</div>
+    </div>
+</div>
+    <!-- ***** Main Banner Area End ***** -->
+<!-- ***** Slider Sản phẩm ***** -->
+<section class="section" id="product-slider">
+  <div class="container">
+    <div class="slider-wrapper">
+      <div class="slider-track">
+         <div class="slide"><img src="{% static 'images/sanpham1.jpg' %}" alt="Sản phẩm 1"></div>
+         <div class="slide"><img src="{% static 'images/sanpham2.jpg' %}" alt="Sản phẩm 2"></div>
+         <div class="slide"><img src="{% static 'images/sanpham3.jpg' %}" alt="Sản phẩm 3"></div>
+         <div class="slide"><img src="{% static 'images/sanpham4.jpg' %}" alt="Sản phẩm 4"></div>
+         <div class="slide"><img src="{% static 'images/sanpham5.jpg' %}" alt="Sản phẩm 5"></div>
+         <div class="slide"><img src="{% static 'images/sanpham6.jpg' %}" alt="Sản phẩm 6"></div>
+         <div class="slide"><img src="{% static 'images/sanpham7.jpg' %}" alt="Sản phẩm 7"></div>
+         <div class="slide"><img src="{% static 'images/sanpham8.jpg' %}" alt="Sản phẩm 8"></div>
+         <div class="slide"><img src="{% static 'images/sanpham9.jpg' %}" alt="Sản phẩm 9"></div>
+         <div class="slide"><img src="{% static 'images/sanpham10.jpg' %}" alt="Sản phẩm 10"></div>
+         <div class="slide"><img src="{% static 'images/sanpham11.jpg' %}" alt="Sản phẩm 11"></div>
+         <div class="slide"><img src="{% static 'images/sanpham12.jpg' %}" alt="Sản phẩm 12"></div>
+         <div class="slide"><img src="{% static 'images/sanpham13.jpg' %}" alt="Sản phẩm 13"></div>
+         <div class="slide"><img src="{% static 'images/sanpham14.jpg' %}" alt="Sản phẩm 14"></div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- ***** Features Item Start ***** -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>dịch <em>vụ</em></h2>
+                        <img src="{% static 'images/line-dec.png' %}" alt="waves">
+                        <p>Dịch vụ sản xuất, gia công cơ khí</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="features-items">
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="{% static 'images/features-first-icon.png' %}" alt="First One">
+                            </div>
+                            <div class="right-content">
+                                <h4>Gia công máy</h4>
+                                <p>cột thép, xà giá đỡ thiết bị mạ kẽm nhúng nóng, kim loại mỹ thuật độ chính xác cao</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="{% static 'images/features-first-icon.png' %}" alt="second one">
+                            </div>
+                            <div class="right-content">
+                                <h4>Gia công thủ công</h4>
+                                <p>cơ khí, xử lý và tráng phủ kim loại, thép mỹ thuật các công trình dân dụng</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="{% static 'images/features-first-icon.png' %}" alt="third gym training">
+                            </div>
+                            <div class="right-content">
+                                <h4>Kết cấu</h4>
+                                <p>thép sơn và thép chịu lực, nhà tiền chế, cơ khí dân dụng</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="features-items">
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="{% static 'images/features-first-icon.png' %}" alt="fourth muscle">
+                            </div>
+                            <div class="right-content">
+                                <h4>Xây dựng</h4>
+                                <p>công trình trạm biến áp điện lực,công trình giao thông, thủy lợi và hạ tầng kỹ thuật</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="{% static 'images/features-first-icon.png' %}" alt="training fifth">
+                            </div>
+                            <div class="right-content">
+                                <h4>Xây dựng</h4>
+                                <p>nhà dân dụng và công nghiệp nhỏ</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ***** Dự án tiêu biểu (Slider) ***** -->
+<section class="section" id="our-classes">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                    <h2>Dự án <em>Tiêu biểu</em></h2>
+                    <img src="{% static 'images/line-dec.png' %}" alt="">
+                    <p>Các dự án nổi bật của công ty đã hoàn thành</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div id="project-slider" class="project-slider">
+                    <div class="slider-item">
+                        <img src="{% static 'images/project1.jpg' %}" alt="Dự án 1">
+                        <h4>Lắp đặt MBA 110KV và thiết bị</h4>
+                        <p>tại Trạm 110kV Thanh Xuân - EVN Hà Nội và trạm GIS 110kV Phương Liệt</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="{% static 'images/project2.jpg' %}" alt="Dự án 2">
+                        <h4>Cung cấp, lắp đặt thiết bị TBA 22kV</h4>
+                        <p>tại Khu đô thị Linh Đàm - Hà Nội</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="{% static 'images/project3.jpg' %}" alt="Dự án 3">
+                        <h4>Thủy điện Nậm Mức / BITEXCO</h4>
+                        <p>và nhiều dự án lớn nhỏ khác</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 🔥 CSS nhỏ gọn cho slider -->
+<style>
+.project-slider {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.slider-item {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+.slider-item.active {
+    display: block;
+}
+.slider-item img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+</style>
+
+<!-- 🔥 JS tự động chạy slider -->
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll("#project-slider .slider-item");
+
+function showSlides() {
+    slides.forEach((slide) => slide.classList.remove("active"));
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex-1].classList.add("active");
+    setTimeout(showSlides, 3000); // 3 giây đổi slide
+}
+
+// Khởi chạy slider
+if(slides.length) showSlides();
+</script>
+
+
+    <!-- ***** Dự án đã hoàn thành ***** -->
+    
+<section class="section" id="projects">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="section-heading">
+          <h2>Các dự án <em>đã hoàn thành</em></h2>
+          <img src="{% static 'images/line-dec.png' %}"  alt="">
+          <p>Danh sách các công trình cơ khí - điện đã thi công.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="table-responsive">
+  <table class="table table-bordered">
+    <thead style="background:#f7f7f7;">
+      <tr>
+        <th>TT</th>
+        <th>Tên dự án - công trình</th>
+        <th>Chủ đầu tư/đối tác</th>
+        <th>Năm</th>
+      </tr>
+    </thead>
+    <tbody id="projects-tbody">
+      <!-- Dòng dự án -->
+      <tr><td>1</td><td>Nâng công suất trạm E1.19 Sóc Sơn</td><td>Công ty TNHH Xây lắp điện 1 Hà Nội</td><td>2017</td></tr>
+      <tr><td>2</td><td>Cải tạo NĐK phân phối hệ thống mương cáp và nâng công suất MBA T3 trạm 110kV Nghĩa Đô</td><td>Công ty TNHH Xây lắp điện 1 Hà Nội</td><td>2015</td></tr>
+      <tr><td>3</td><td>Xây dựng trạm biến áp 110kV Ba Vì</td><td>Công ty TNHH Xây lắp điện 1 Hà Nội</td><td>2018</td></tr>
+      <tr><td>4</td><td>Xây dựng nhà điều hành T3 trạm 110kV Thanh Xuân E1.20</td><td>Công ty TNHH Xây lắp điện 1 Hà Nội</td><td>2016</td></tr>
+      <tr><td>5</td><td>Xây dựng và lắp đặt Trạm GIS Phương Liệt</td><td>Công ty TNHH Xây lắp điện 1 Hà Nội</td><td>2018</td></tr>
+      <tr><td>6</td><td>Thi công xây lắp 02 lộ XT 22kV từ trạm 220kV Vân Trì đến TBA 110/22kV sân bay Nội Bài (phần móng)</td><td>Công ty Điện lực Sóc Sơn</td><td>2014</td></tr>
+      <!-- Các dòng còn lại -->
+      <tr><td>7</td><td>Gói thầu Đ-HT2: Thi công lắp đặt tuyến cáp sau TBA N1,3,5,6,7 cấp điện cho TBA N1 (Lô TT1), N3 (Lô TT2), N5 (Lô TT4, TT6), N6 (Lô TT3, CT3) và N7 (Lô TT5)</td><td>Công ty TNHH Xây lắp điện 1 Hà Nội</td><td>2015</td></tr>
+      <tr><td>8</td><td>Đ-3D Thi công các TBA N7, N9, N10 và thi công tuyến cáp ngầm 22kV từ TBA N5 đến TBA N9</td><td>Công ty TNHH Xây lắp điện 1 Hà Nội / Tổng công ty Đầu tư Phát triển Nhà & Đô thị</td><td>2015</td></tr>
+      <tr><td>9</td><td>Xây lắp nhà điều hành trạm biến áp 110kV thủy điện Nậm Mức và hệ thống thang giá cáp lực</td><td>Công ty TNHH MTV XLDD1 Ba La / Bitexco</td><td>2013</td></tr>
+      <tr><td>10</td><td>Xây lắp mở rộng TBA 220kV Vân Trì</td><td>Công ty TNHH Xây lắp điện 1 Hà Nội</td><td>2015</td></tr>
+      <tr><td>11</td><td>Gia công chế tạo kết cấu thép mạ kẽm cho các dự án điện và dân dụng</td><td>EVN, Bitexco, HUD</td><td>2013</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Nút xem thêm -->
+  <div class="text-center mt-3">
+    <button id="show-more-projects" class="main-button">Xem thêm</button>
+  </div>
+</div>
+    
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="hoso-nangluc">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                    <h2>Hồ sơ <em>Năng lực</em></h2>
+                    <img src="{% static 'images/line-dec.png' %}" alt="">
+                    <p>Giới thiệu năng lực, kinh nghiệm và các dự án tiêu biểu của công ty TNHH xây dựng và gia công cơ khí Thành Đạt </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="hoso-container">
+
+                    <!-- PDF Viewer -->
+                    <iframe 
+                        src="{% static 'files/hoso-nangluc.pdf' %}"
+                        width="100%" 
+                        height="450px"
+                        style="border: none;">
+                    </iframe>
+
+                    <!-- Buttons -->
+                    <div class="hoso-actions">
+                        <a href="{% static 'files/hoso-nangluc.pdf' %}" target="_blank" class="btn-view">
+                            📄 Xem toàn màn hình
+                        </a>
+                        <a href="{% static 'files/hoso-nangluc.pdf' %}" download class="btn-download">
+                            ⬇ Tải file PDF
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <!-- ===== Báo giá full-width ===== -->
+<section class="section" id="contact-banner">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10 text-center">
+        <div class="contact-banner-box">
+          <h4>Báo giá - Liên hệ ngay</h4>
+          <p class="banner-subtext">Điền thông tin để nhận báo giá nhanh trong 5 phút</p>
+          <form id="contact" onsubmit="sendTelegram(); return false;" class="contact-form-banner">
+            <div class="row">
+              <div class="col-md-6 mb-2">
+                <input name="name" type="text" id="name" placeholder="Tên của bạn*" required="">
+              </div>
+              <div class="col-md-6 mb-2">
+                <input name="phone" type="text" id="phone" placeholder="Số điện thoại*" required="">
+              </div>
+              <div class="col-12 mb-2">
+                <textarea name="content" rows="4" id="content" placeholder="Nội dung yêu cầu"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" id="form-submit" class="main-button">Gửi yêu cầu</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Info công ty + Map ===== -->
+<section class="section" id="info-map">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      
+      <!-- Info công ty bên trái -->
+      <div class="col-lg-6 col-md-12 mb-3">
+        <div class="contact-info text-center text-lg-start">
+          <h5>Công ty TNHH Xây dựng và Gia công cơ khí Thành Đạt</h5>
+          <p>📍 Địa chỉ: Khối 6, thôn Đoài, Phù Lỗ, Sóc Sơn, Hà Nội</p>
+          <p>Gia công CNC • Gia công cơ khí chính xác • đợi anh Thành sửa</p>
+          <p>📞 0962 133 098 &nbsp;&nbsp; ✉️ thanhdat310@gmail.com</p>
+          <p>✔ Tư vấn miễn phí – Báo giá nhanh trong 5 phút</p>
+        </div>
+      </div>
+
+      <!-- Map bên phải -->
+      <div class="col-lg-6 col-md-12 mb-3">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14997.935849721564!2d105.8441867!3d21.1897347!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31350163a5c68c1d%3A0x6b7ee005d88c1c48!2sNg%C3%B5%20V%C4%83n%20Ph%C3%BAc%2C%20Ph%E1%BB%A7%20L%E1%BB%97%2C%20S%C3%B3c%20S%C6%A1n%2C%20H%C3%A0%20N%E1%BB%99i%2C%20Vi%E1%BB%87t%20Nam!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+          width="100%" 
+          height="300" 
+          style="border:0; border-radius:8px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🔥 JS gửi Telegram -->
+<script>
+function sendTelegram(){
+  let name = document.getElementById("name").value.trim();
+  let phone = document.getElementById("phone").value.trim();
+  let content = document.getElementById("content").value.trim();
+
+  if(!name || !phone){
+    alert("Khách vui lòng nhập đủ tên và số điện thoại để nhận báo giá nhé!");
+    return;
+  }
+
+  let message = 
+`📩 KHÁCH BÁO GIÁ THÀNH ĐẠT
+
+👤 Tên: ${name}
+📞 SĐT: ${phone}
+
+📝 Nội dung:
+${content}`;
+
+  let token = "8213846644:AAG_Mom7MRzH97Y_-c7KQocQ0VS9qqf3mIc";
+  let chat_id = "6663298744";
+
+  let url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(message)}`;
+
+  fetch(url)
+    .then(() => {
+      alert("Đã gửi yêu cầu!");
+      document.getElementById("name").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("content").value = "";
+    })
+    .catch(() => alert("Lỗi, thử lại nhé!"));
+}
+</script>
+    <!-- ***** Contact Us Area Ends ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 2015 Công ty TNHH xây dựng và gia công cơ khí Thành Đạt. Phone: 0962133098
+                    
+                    - Designed by Bảo Tín
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- jQuery (nếu plugin cần) -->
+<script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
+
+<!-- Bootstrap CSS & JS Bundle (CDN, đã bao gồm Popper) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugins -->
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+<script src="{% static 'js/waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'js/imgfix.min.js' %}"></script> 
+<script src="{% static 'js/mixitup.js' %}"></script> 
+<script src="{% static 'js/accordions.js' %}"></script>
+
+<!-- Global Init -->
+<script src="{% static 'js/custom.js' %}"></script>
+
+<!-- 🔥 Slider sản phẩm hover pause -->
+<script>
+const slider = document.querySelector('.slider-wrapper');
+slider.addEventListener('mouseenter', () => {
+    document.querySelector('.slider-track').style.animationPlayState = 'paused';
+});
+slider.addEventListener('mouseleave', () => {
+    document.querySelector('.slider-track').style.animationPlayState = 'running';
+});
+</script>
+<script>
+const track = document.querySelector('.slider-track');
+const slides = Array.from(track.children);
+
+// Nhân đôi slide để chạy liên tục
+slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
+</script>
+
+
+<script>
+const projectRows = document.querySelectorAll("#projects tbody tr");
+const showMoreBtn = document.getElementById("show-more-projects");
+const showCount = 6; // hiện 6 dòng đầu
+
+// ẩn các dòng ngoài 6
+projectRows.forEach((row, i) => {
+  if(i >= showCount) row.style.display = "none";
+});
+
+showMoreBtn.addEventListener("click", () => {
+  const hiddenRows = Array.from(projectRows).filter(row => row.style.display === "none");
+
+  if(hiddenRows.length > 0){
+    // hiện tất cả dòng ẩn
+    hiddenRows.forEach(row => row.style.display = "table-row");
+    showMoreBtn.textContent = "Thu gọn"; // đổi chữ
+  } else {
+    // ẩn lại các dòng > 6
+    projectRows.forEach((row, i) => {
+      if(i >= showCount) row.style.display = "none";
+    });
+    showMoreBtn.textContent = "Xem thêm";
+  }
+});
+</script>
+
+<!-- Pill chat Zalo cố định -->
+<a href="https://zalo.me/0962133098" target="_blank" class="zalo-pill">
+  Chat Zalo
+</a>
+</body>
+</html>
+
+</html>

@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-nb=-r-1xz#2p-qu0wriqv@0)z$n#0_$1f2v*x9+o5swc%4$*bh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [
+ALLOWED_HOSTS = ['127.0.0.1',
     'cokhisocson.io.vn',
     'www.cokhisocson.io.vn',
     'cokhisocson.onrender.com'
@@ -124,6 +124,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     'static',
+]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
 ]
 
 # Default primary key field type
