@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-nb=-r-1xz#2p-qu0wriqv@0)z$n#0_$1f2v*x9+o5swc%4$*bh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'cokhisocson.io.vn',
@@ -128,7 +128,7 @@ STATICFILES_DIRS = [
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # hoặc bất cứ thư mục nào ngoài static/
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
