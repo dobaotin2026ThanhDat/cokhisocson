@@ -2,59 +2,42 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
+    <!-- META cơ bản -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE và description -->
     <title>Cơ khí Thành Đạt | Gia công CNC, sắt thép mỹ thuật Hà Nội</title>
+    <meta name="description" content="Gia công CNC, sắt thép mỹ thuật theo yêu cầu tại Hà Nội. Báo giá nhanh – giá hợp lý – hỗ trợ tận nơi.">
 
-<meta name="description" content="Gia công CNC, sắt thép mỹ thuật theo yêu cầu tại Hà Nội. Báo giá nhanh – giá hợp lý – hỗ trợ tận nơi.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/logo1.png' %}">
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="{% static 'images/logo1.png' %}">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Mulish:wght@400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
 
-<!-- Open Graph (Facebook, Zalo) -->
-<meta property="og:title" content="Cơ khí Thành Đạt">
-<meta property="og:description" content="Gia công CNC, cơ khí chính xác, báo giá nhanh tại Hà Nội 0962 133 098">
-<meta property="og:image" content="https://cokhisocson.io.vn/static/images/preview.jpg">
-<meta property="og:url" content="https://cokhisocson.io.vn">
-<meta property="og:type" content="website">
+    <!-- Open Graph (Facebook, Zalo) -->
+    <meta property="og:title" content="Cơ khí Thành Đạt">
+    <meta property="og:description" content="Gia công CNC, cơ khí chính xác, báo giá nhanh tại Hà Nội 0962 133 098">
+    <meta property="og:image" content="https://cokhisocson.io.vn/static/images/preview.jpg">
+    <meta property="og:url" content="https://cokhisocson.io.vn">
+    <meta property="og:type" content="website">
 
-<!-- Twitter (cũng dùng cho Zalo ok luôn) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cơ khí Thành Đạt">
-<meta name="twitter:description" content="Gia công CNC – báo giá nhanh – uy tín Hà Nội 0962 133 098">
-<meta name="twitter:image" content="https://cokhisocson.io.vn/static/images/preview.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cơ khí Thành Đạt">
+    <meta name="twitter:description" content="Gia công CNC – báo giá nhanh – uy tín Hà Nội 0962 133 098">
+    <meta name="twitter:image" content="https://cokhisocson.io.vn/static/images/preview.jpg">
 
-<!-- META -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- TITLE -->
-<title>CƠ KHÍ THÀNH ĐẠT</title>
-
-<!-- BOOTSTRAP CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- CSS RIÊNG -->
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+    <!-- CSS RIÊNG -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
 
-
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Mulish:wght@400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
-    <title>Cơ khí Thành Đạt</title>
-<!--
-
-TemplateMo 548 Training Studio
-
-https://templatemo.com/tm-548-training-studio
-
--->
     <!-- Additional CSS Files -->
 <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
@@ -612,6 +595,28 @@ showMoreBtn.addEventListener("click", () => {
 <a href="https://zalo.me/0962133098" target="_blank" class="zalo-pill">
   Chat Zalo
 </a>
+
+<script>
+const track = document.querySelector('#product-slider .slider-track');
+if (track) {
+  let speed = 1; // số px mỗi frame, tăng = nhanh hơn
+  let pos = 0;
+
+  // Nhân đôi slide để chạy liên tục
+  track.innerHTML += track.innerHTML;
+
+  function animateSlider() {
+    pos -= speed;
+    if (pos <= -track.scrollWidth / 2) {
+      pos = 0; // reset khi trượt hết 1 nửa
+    }
+    track.style.transform = `translateX(${pos}px)`;
+    requestAnimationFrame(animateSlider);
+  }
+
+  animateSlider(); // khởi chạy slider
+}
+</script>
 </body>
 </html>
 

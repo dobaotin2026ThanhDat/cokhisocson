@@ -1479,18 +1479,13 @@ body, p, a, li, td, th, .feature-item h4 {
 #product-slider .slider-track {
   display: flex;
   gap: 15px;
-  animation: scroll 5s linear infinite;
+  /* bỏ animation CSS cũ */
 }
 
 #product-slider .slide img {
-  height: 325px;        /* tăng 1.5 lần */
+  height: 325px;
   object-fit: contain;
   border-radius: 8px;
-}
-
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); } /* chạy liên tục */
 }
 
 /* ===== Báo giá banner ===== */
