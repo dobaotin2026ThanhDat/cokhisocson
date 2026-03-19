@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-nb=-r-1xz#2p-qu0wriqv@0)z$n#0_$1f2v*x9+o5swc%4$*bh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1',
+ALLOWED_HOSTS = [
     'cokhisocson.io.vn',
     'www.cokhisocson.io.vn',
     'cokhisocson.onrender.com'

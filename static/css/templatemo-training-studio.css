@@ -1984,3 +1984,10 @@ header .main-nav ul.nav {
   animation-delay: 2s;
   animation-iteration-count: infinite;
 }
+
+#bg-gif {
+    width: 100%;
+    height: 100vh;          /* full chiều cao màn hình */
+    object-fit: cover;       /* cắt vừa đủ nhưng giữ tỉ lệ */
+    display: block;
+}
