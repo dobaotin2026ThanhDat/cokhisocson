@@ -168,20 +168,6 @@
          <div class="slide"><img src="{% static 'images/sanpham12.jpg' %}" alt="Sản phẩm 12"></div>
          <div class="slide"><img src="{% static 'images/sanpham13.jpg' %}" alt="Sản phẩm 13"></div>
          <div class="slide"><img src="{% static 'images/sanpham14.jpg' %}" alt="Sản phẩm 14"></div>
-         <div class="slide"><img src="{% static 'images/sanpham1.jpg' %}" alt="Sản phẩm 1"></div>
-         <div class="slide"><img src="{% static 'images/sanpham2.jpg' %}" alt="Sản phẩm 2"></div>
-         <div class="slide"><img src="{% static 'images/sanpham3.jpg' %}" alt="Sản phẩm 3"></div>
-         <div class="slide"><img src="{% static 'images/sanpham4.jpg' %}" alt="Sản phẩm 4"></div>
-         <div class="slide"><img src="{% static 'images/sanpham5.jpg' %}" alt="Sản phẩm 5"></div>
-         <div class="slide"><img src="{% static 'images/sanpham6.jpg' %}" alt="Sản phẩm 6"></div>
-         <div class="slide"><img src="{% static 'images/sanpham7.jpg' %}" alt="Sản phẩm 7"></div>
-         <div class="slide"><img src="{% static 'images/sanpham8.jpg' %}" alt="Sản phẩm 8"></div>
-         <div class="slide"><img src="{% static 'images/sanpham9.jpg' %}" alt="Sản phẩm 9"></div>
-         <div class="slide"><img src="{% static 'images/sanpham10.jpg' %}" alt="Sản phẩm 10"></div>
-         <div class="slide"><img src="{% static 'images/sanpham11.jpg' %}" alt="Sản phẩm 11"></div>
-         <div class="slide"><img src="{% static 'images/sanpham12.jpg' %}" alt="Sản phẩm 12"></div>
-         <div class="slide"><img src="{% static 'images/sanpham13.jpg' %}" alt="Sản phẩm 13"></div>
-         <div class="slide"><img src="{% static 'images/sanpham14.jpg' %}" alt="Sản phẩm 14"></div>
       </div>
     </div>
   </div>
@@ -612,29 +598,26 @@ showMoreBtn.addEventListener("click", () => {
 
 <script>
 const track = document.getElementById('slider-track');
-const speed = 1; // px/frame, tăng lên chạy nhanh hơn
-
-// Nhân đôi slide để chạy liên tục
-track.innerHTML += track.innerHTML;
-
-function animateSlider() {
-    track.scrollLeft += speed;
-    if (track.scrollLeft >= track.scrollWidth / 2) {
-        track.scrollLeft = 0; // reset để loop vô hạn
-    }
-    requestAnimationFrame(animateSlider);
-}
-
-// Khởi chạy slider
-animateSlider();
-</script>
-<script>
-const track = document.querySelector('#product-slider .slider-track');
 
 if (track) {
-  track.addEventListener('touchstart', () => {
-    track.style.animationPlayState = 'running';
-  });
+  let speed = 1.5; // 🔥 chỉnh tốc độ ở đây (1.5 = nhanh hơn)
+  let pos = 0;
+
+  // nhân đôi nội dung để loop vô hạn
+  track.innerHTML += track.innerHTML;
+
+  function runSlider() {
+    pos -= speed;
+
+    if (Math.abs(pos) >= track.scrollWidth / 2) {
+      pos = 0;
+    }
+
+    track.style.transform = `translateX(${pos}px)`;
+    requestAnimationFrame(runSlider);
+  }
+
+  runSlider();
 }
 </script>
 </body>
