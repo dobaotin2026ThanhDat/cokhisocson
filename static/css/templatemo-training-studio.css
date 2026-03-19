@@ -1479,11 +1479,11 @@ body, p, a, li, td, th, .feature-item h4 {
 #product-slider .slider-track {
   display: flex;
   gap: 15px;
-  /* bỏ animation CSS cũ */
+  scroll-behavior: smooth; /* smooth scroll */
 }
 
 #product-slider .slide img {
-  height: 325px;
+  height: 325px; 
   object-fit: contain;
   border-radius: 8px;
 }

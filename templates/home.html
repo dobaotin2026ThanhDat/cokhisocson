@@ -152,8 +152,8 @@
 <!-- ***** Slider Sản phẩm ***** -->
 <section class="section" id="product-slider">
   <div class="container">
-    <div class="slider-wrapper">
-      <div class="slider-track">
+    <div class="slider-wrapper" id="slider-wrapper">
+        <div class="slider-track" id="slider-track">
          <div class="slide"><img src="{% static 'images/sanpham1.jpg' %}" alt="Sản phẩm 1"></div>
          <div class="slide"><img src="{% static 'images/sanpham2.jpg' %}" alt="Sản phẩm 2"></div>
          <div class="slide"><img src="{% static 'images/sanpham3.jpg' %}" alt="Sản phẩm 3"></div>
@@ -597,25 +597,22 @@ showMoreBtn.addEventListener("click", () => {
 </a>
 
 <script>
-const track = document.querySelector('#product-slider .slider-track');
-if (track) {
-  let speed = 1; // số px mỗi frame, tăng = nhanh hơn
-  let pos = 0;
+const track = document.getElementById('slider-track');
+const speed = 1; // px/frame, tăng lên chạy nhanh hơn
 
-  // Nhân đôi slide để chạy liên tục
-  track.innerHTML += track.innerHTML;
+// Nhân đôi slide để chạy liên tục
+track.innerHTML += track.innerHTML;
 
-  function animateSlider() {
-    pos -= speed;
-    if (pos <= -track.scrollWidth / 2) {
-      pos = 0; // reset khi trượt hết 1 nửa
+function animateSlider() {
+    track.scrollLeft += speed;
+    if (track.scrollLeft >= track.scrollWidth / 2) {
+        track.scrollLeft = 0; // reset để loop vô hạn
     }
-    track.style.transform = `translateX(${pos}px)`;
     requestAnimationFrame(animateSlider);
-  }
-
-  animateSlider(); // khởi chạy slider
 }
+
+// Khởi chạy slider
+animateSlider();
 </script>
 </body>
 </html>
