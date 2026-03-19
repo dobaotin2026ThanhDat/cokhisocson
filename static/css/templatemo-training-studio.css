@@ -1470,22 +1470,31 @@ body, p, a, li, td, th, .feature-item h4 {
     font-weight: 500;               /* vừa phải, dễ nhìn */
 }
 
+/* Container slider */
 #product-slider .slider-wrapper {
   overflow: hidden;
   width: 100%;
   margin: 20px 0;
 }
 
+/* Track trượt liên tục */
 #product-slider .slider-track {
   display: flex;
   gap: 15px;
-  scroll-behavior: smooth; /* smooth scroll */
+  animation: scroll 3.5s linear infinite; /* thời gian càng ngắn càng nhanh */
 }
 
+/* Slide hình ảnh */
 #product-slider .slide img {
-  height: 325px; 
+  height: 325px;        
   object-fit: contain;
   border-radius: 8px;
+}
+
+/* Keyframes trượt liên tục */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* giả lập chạy liên tục khi nhân đôi slide */
 }
 
 /* ===== Báo giá banner ===== */
