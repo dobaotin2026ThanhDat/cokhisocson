@@ -1470,20 +1470,26 @@ body, p, a, li, td, th, .feature-item h4 {
     font-weight: 500;               /* vừa phải, dễ nhìn */
 }
 
-#product-slider .slider-wrapper {
+#slider-wrapper {
   overflow: hidden;
-  width: 100%;
-  margin: 20px 0;
+  position: relative;
 }
 
-#product-slider .slider-track {
+#slider-track {
   display: flex;
-  gap: 15px;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
-#product-slider .slide img {
-  height: 325px;
-  object-fit: contain;
+.slide {
+  flex: 0 0 auto;
+  width: 200px; /* width của slide */
+  margin-right: 10px;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
   border-radius: 8px;
 }
 

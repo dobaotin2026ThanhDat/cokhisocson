@@ -149,25 +149,16 @@
     </div>
 </div>
     <!-- ***** Main Banner Area End ***** -->
-<!-- ***** Slider Sản phẩm ***** -->
+<!-- ***** Slider Sản phẩm Mới ***** -->
 <section class="section" id="product-slider">
   <div class="container">
     <div class="slider-wrapper" id="slider-wrapper">
-        <div class="slider-track" id="slider-track">
-         <div class="slide"><img src="{% static 'images/sanpham1.jpg' %}" alt="Sản phẩm 1"></div>
-         <div class="slide"><img src="{% static 'images/sanpham2.jpg' %}" alt="Sản phẩm 2"></div>
-         <div class="slide"><img src="{% static 'images/sanpham3.jpg' %}" alt="Sản phẩm 3"></div>
-         <div class="slide"><img src="{% static 'images/sanpham4.jpg' %}" alt="Sản phẩm 4"></div>
-         <div class="slide"><img src="{% static 'images/sanpham5.jpg' %}" alt="Sản phẩm 5"></div>
-         <div class="slide"><img src="{% static 'images/sanpham6.jpg' %}" alt="Sản phẩm 6"></div>
-         <div class="slide"><img src="{% static 'images/sanpham7.jpg' %}" alt="Sản phẩm 7"></div>
-         <div class="slide"><img src="{% static 'images/sanpham8.jpg' %}" alt="Sản phẩm 8"></div>
-         <div class="slide"><img src="{% static 'images/sanpham9.jpg' %}" alt="Sản phẩm 9"></div>
-         <div class="slide"><img src="{% static 'images/sanpham10.jpg' %}" alt="Sản phẩm 10"></div>
-         <div class="slide"><img src="{% static 'images/sanpham11.jpg' %}" alt="Sản phẩm 11"></div>
-         <div class="slide"><img src="{% static 'images/sanpham12.jpg' %}" alt="Sản phẩm 12"></div>
-         <div class="slide"><img src="{% static 'images/sanpham13.jpg' %}" alt="Sản phẩm 13"></div>
-         <div class="slide"><img src="{% static 'images/sanpham14.jpg' %}" alt="Sản phẩm 14"></div>
+      <div class="slider-track" id="slider-track">
+        {% for i in 1|to:14 %}
+          <div class="slide">
+            <img loading="lazy" src="{% static 'images/sanpham'|add:i|stringformat:'d'|add:'.jpg' %}" alt="Sản phẩm {{ i }}">
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -597,28 +588,51 @@ showMoreBtn.addEventListener("click", () => {
 </a>
 
 <script>
-const track = document.getElementById('slider-track');
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.getElementById('slider-track');
+  const slides = Array.from(track.children);
+  const slideCount = slides.length;
+  const slideWidth = slides[0].offsetWidth + 10; // width + margin
+  let index = 0;
+  const autoplaySpeed = 3000; // 3s
 
-if (track) {
-  let speed = 1.5; // 🔥 chỉnh tốc độ ở đây (1.5 = nhanh hơn)
-  let pos = 0;
+  // clone slides để loop vô hạn
+  slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
 
-  // nhân đôi nội dung để loop vô hạn
-  track.innerHTML += track.innerHTML;
+  // autoplay function
+  function moveSlider() {
+    index++;
+    track.style.transform = `translateX(${-slideWidth * index}px)`;
 
-  function runSlider() {
-    pos -= speed;
-
-    if (Math.abs(pos) >= track.scrollWidth / 2) {
-      pos = 0;
+    if (index >= slideCount) {
+      // reset về đầu sau khi clone
+      setTimeout(() => {
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(0)';
+        index = 0;
+        requestAnimationFrame(() => {
+          track.style.transition = 'transform 0.5s ease-in-out';
+        });
+      }, 500); // khớp với transition
     }
-
-    track.style.transform = `translateX(${pos}px)`;
-    requestAnimationFrame(runSlider);
   }
 
-  runSlider();
-}
+  // start autoplay
+  let interval = setInterval(moveSlider, autoplaySpeed);
+
+  // giữ slider chạy khi chạm / swipe
+  track.addEventListener('touchstart', e => e.stopPropagation());
+  track.addEventListener('mousedown', e => e.stopPropagation());
+
+  // responsive: tính lại slideWidth khi resize
+  window.addEventListener('resize', () => {
+    const newSlideWidth = slides[0].offsetWidth + 10;
+    if (newSlideWidth !== slideWidth) {
+      // không cần reset index, chỉ update slideWidth
+      slideWidth = newSlideWidth;
+    }
+  });
+});
 </script>
 </body>
 </html>
