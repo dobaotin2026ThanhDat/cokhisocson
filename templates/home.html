@@ -149,20 +149,86 @@
     </div>
 </div>
     <!-- ***** Main Banner Area End ***** -->
-<!-- ***** Slider Sản phẩm Mới ***** -->
+<!-- ***** Slider Sản phẩm ***** -->
 <section class="section" id="product-slider">
   <div class="container">
     <div class="slider-wrapper" id="slider-wrapper">
       <div class="slider-track" id="slider-track">
-        {% for i in 1|to:14 %}
-          <div class="slide">
-            <img loading="lazy" src="{% static 'images/sanpham'|add:i|stringformat:'d'|add:'.jpg' %}" alt="Sản phẩm {{ i }}">
-          </div>
-        {% endfor %}
+        <div class="slide"><img src="{% static 'images/sanpham1.jpg' %}" alt="Sản phẩm 1"></div>
+        <div class="slide"><img src="{% static 'images/sanpham2.jpg' %}" alt="Sản phẩm 2"></div>
+        <div class="slide"><img src="{% static 'images/sanpham3.jpg' %}" alt="Sản phẩm 3"></div>
+        <div class="slide"><img src="{% static 'images/sanpham4.jpg' %}" alt="Sản phẩm 4"></div>
+        <div class="slide"><img src="{% static 'images/sanpham5.jpg' %}" alt="Sản phẩm 5"></div>
+        <div class="slide"><img src="{% static 'images/sanpham6.jpg' %}" alt="Sản phẩm 6"></div>
+        <div class="slide"><img src="{% static 'images/sanpham7.jpg' %}" alt="Sản phẩm 7"></div>
+        <div class="slide"><img src="{% static 'images/sanpham8.jpg' %}" alt="Sản phẩm 8"></div>
+        <div class="slide"><img src="{% static 'images/sanpham9.jpg' %}" alt="Sản phẩm 9"></div>
+        <div class="slide"><img src="{% static 'images/sanpham10.jpg' %}" alt="Sản phẩm 10"></div>
+        <div class="slide"><img src="{% static 'images/sanpham11.jpg' %}" alt="Sản phẩm 11"></div>
+        <div class="slide"><img src="{% static 'images/sanpham12.jpg' %}" alt="Sản phẩm 12"></div>
+        <div class="slide"><img src="{% static 'images/sanpham13.jpg' %}" alt="Sản phẩm 13"></div>
+        <div class="slide"><img src="{% static 'images/sanpham14.jpg' %}" alt="Sản phẩm 14"></div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+#slider-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+#slider-track {
+  display: flex;
+  will-change: transform;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  pointer-events: none; /* tránh dừng khi chạm */
+  user-select: none;
+}
+</style>
+
+<script>
+const track = document.getElementById('slider-track');
+
+// Nhân đôi nội dung để trượt vòng lặp mượt
+track.innerHTML += track.innerHTML;
+
+let speed = 1; // pixels/frame, tăng nếu muốn nhanh
+let scroll = 0;
+
+function animate() {
+  scroll += speed;
+  if (scroll >= track.scrollWidth / 2) scroll = 0;
+  track.style.transform = `translateX(-${scroll}px)`;
+  requestAnimationFrame(animate);
+}
+
+// touch support (vuốt điện thoại không dừng)
+let startX = 0;
+track.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+track.addEventListener('touchmove', e => {
+  const dx = e.touches[0].clientX - startX;
+  scroll -= dx; // swipe đổi hướng
+  startX = e.touches[0].clientX;
+});
+track.addEventListener('touchend', () => {});
+
+animate();
+</script>
     <!-- ***** Features Item Start ***** -->
     <section class="section" id="features">
         <div class="container">
@@ -596,44 +662,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let index = 0;
   const autoplaySpeed = 3000; // 3s
 
-  // clone slides để loop vô hạn
-  slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
-
-  // autoplay function
-  function moveSlider() {
-    index++;
-    track.style.transform = `translateX(${-slideWidth * index}px)`;
-
-    if (index >= slideCount) {
-      // reset về đầu sau khi clone
-      setTimeout(() => {
-        track.style.transition = 'none';
-        track.style.transform = 'translateX(0)';
-        index = 0;
-        requestAnimationFrame(() => {
-          track.style.transition = 'transform 0.5s ease-in-out';
-        });
-      }, 500); // khớp với transition
-    }
-  }
-
-  // start autoplay
-  let interval = setInterval(moveSlider, autoplaySpeed);
-
-  // giữ slider chạy khi chạm / swipe
-  track.addEventListener('touchstart', e => e.stopPropagation());
-  track.addEventListener('mousedown', e => e.stopPropagation());
-
-  // responsive: tính lại slideWidth khi resize
-  window.addEventListener('resize', () => {
-    const newSlideWidth = slides[0].offsetWidth + 10;
-    if (newSlideWidth !== slideWidth) {
-      // không cần reset index, chỉ update slideWidth
-      slideWidth = newSlideWidth;
-    }
-  });
-});
-</script>
+  
 </body>
 </html>
 

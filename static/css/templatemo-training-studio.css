@@ -1470,28 +1470,6 @@ body, p, a, li, td, th, .feature-item h4 {
     font-weight: 500;               /* vừa phải, dễ nhìn */
 }
 
-#slider-wrapper {
-  overflow: hidden;
-  position: relative;
-}
-
-#slider-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  will-change: transform;
-}
-
-.slide {
-  flex: 0 0 auto;
-  width: 200px; /* width của slide */
-  margin-right: 10px;
-}
-
-.slide img {
-  width: 100%;
-  display: block;
-  border-radius: 8px;
-}
 
 /* ===== Báo giá banner ===== */
 #contact-banner .contact-banner-box {
