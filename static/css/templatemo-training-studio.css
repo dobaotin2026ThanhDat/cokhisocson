@@ -1479,12 +1479,8 @@ body, p, a, li, td, th, .feature-item h4 {
 #product-slider .slider-track {
   display: flex;
   gap: 15px;
-  animation: scroll 6.5s linear infinite;
+  animation: scroll 5s linear infinite;
 }
-/* hover không pause nữa, xóa block dưới 
-#product-slider .slider-wrapper:hover .slider-track {
-  animation-play-state: paused; /* hover tạm dừng */
-}*/
 
 #product-slider .slide img {
   height: 325px;        /* tăng 1.5 lần */
@@ -1494,7 +1490,7 @@ body, p, a, li, td, th, .feature-item h4 {
 
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* chạy liên tục */
+  100% { transform: translateX(-100%); } /* chạy liên tục */
 }
 
 /* ===== Báo giá banner ===== */
