@@ -1479,12 +1479,12 @@ body, p, a, li, td, th, .feature-item h4 {
 #product-slider .slider-track {
   display: flex;
   gap: 15px;
-  animation: scroll 15s linear infinite;
+  animation: scroll 6.5s linear infinite;
 }
-
+/* hover không pause nữa, xóa block dưới 
 #product-slider .slider-wrapper:hover .slider-track {
   animation-play-state: paused; /* hover tạm dừng */
-}
+}*/
 
 #product-slider .slide img {
   height: 325px;        /* tăng 1.5 lần */
