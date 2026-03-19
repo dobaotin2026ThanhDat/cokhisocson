@@ -629,12 +629,13 @@ function animateSlider() {
 animateSlider();
 </script>
 <script>
-// Bật lại animation khi chạm trên mobile
 const track = document.querySelector('#product-slider .slider-track');
 
-track.addEventListener('touchstart', () => {
-  track.style.animationPlayState = 'running';
-});
+if (track) {
+  track.addEventListener('touchstart', () => {
+    track.style.animationPlayState = 'running';
+  });
+}
 </script>
 </body>
 </html>
